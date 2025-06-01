@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Train Your Rotty</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.7;
+            color: #2c3e2d;
+            overflow-x: hidden;
+            background: #fafafa;
+        }
+
+        /* Fixed Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(45, 80, 22, 0.95);
+            backdrop-filter: blur(15px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(212, 212, 170, 0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: #f4f3e8;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+        }
+
+        nav a:hover {
+            color: #cd853f;
+            background: rgba(244, 243, 232, 0.1);
+        }
+
+        /* Header Section */
+        .privacy-header {
+            background: linear-gradient(135deg, #2d5016 0%, #4a7c59 50%, #52734d 100%);
+            padding: 150px 20px 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .privacy-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="leaf-pattern" x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M12.5,5 Q17.5,10 12.5,15 Q7.5,10 12.5,5 Z" fill="rgba(255,255,255,0.08)"/></pattern></defs><rect width="100" height="100" fill="url(%23leaf-pattern)"/></svg>');
+            animation: sway 25s ease-in-out infinite;
+        }
+
+        @keyframes sway {
+            0%, 100% { transform: translateX(0px) translateY(0px) rotate(0deg); }
+            25% { transform: translateX(-10px) translateY(-5px) rotate(1deg); }
+            50% { transform: translateX(0px) translateY(-10px) rotate(0deg); }
+            75% { transform: translateX(10px) translateY(-5px) rotate(-1deg); }
+        }
+
+        .privacy-header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #f4f3e8;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+            position: relative;
+            z-index: 2;
+        }
+
+        .privacy-header .subtitle {
+            font-size: 1.3rem;
+            color: #d4d4aa;
+            font-style: italic;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Main Content */
+        .privacy-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(45, 80, 22, 0.1);
+            margin-top: -40px;
+            position: relative;
+            z-index: 3;
+        }
+
+        .last-updated {
+            background: linear-gradient(135deg, #f0f8e8 0%, #e8f5e8 100%);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-left: 5px solid #8b4513;
+            margin-bottom: 3rem;
+            font-weight: 600;
+            color: #2d5016;
+        }
+
+        .privacy-section {
+            margin-bottom: 3rem;
+        }
+
+        .privacy-section h2 {
+            font-size: 2rem;
+            color: #2d5016;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #8b4513;
+            font-family: 'Georgia', serif;
+        }
+
+        .privacy-section h3 {
+            font-size: 1.4rem;
+            color: #4a7c59;
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+        }
+
+        .privacy-section p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .privacy-section ul, .privacy-section ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .privacy-section li {
+            margin-bottom: 0.8rem;
+            line-height: 1.7;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #f4f3e8 0%, #faf8f1 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px solid #d4d4aa;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .highlight-box::before {
+            content: '🛡️';
+            font-size: 1.5rem;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: white;
+            padding: 0 10px;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #2d5016 0%, #4a7c59 100%);
+            color: #f4f3e8;
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .contact-info h3 {
+            color: #cd853f;
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+        }
+
+        .contact-info a {
+            color: #d4d4aa;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-info a:hover {
+            color: #cd853f;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 12px 30px;
+            background: linear-gradient(45deg, #8b4513, #a0522d);
+            color: #f4f3e8;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .back-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(139, 69, 19, 0.3);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .privacy-header {
+                padding: 120px 20px 80px;
+            }
+
+            .privacy-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .privacy-content {
+                margin-top: -20px;
+                padding: 60px 20px;
+            }
+
+            .privacy-section h2 {
+                font-size: 1.6rem;
+            }
+
+            nav ul {
+                gap: 1.5rem;
+            }
+
+            nav a {
+                font-size: 0.8rem;
+                padding: 0.3rem 0.8rem;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#philosophy">Philosophy</a></li>
+            <li><a href="index.html#training">Training</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="privacy-header">
+        <h1>Privacy Policy</h1>
+        <div class="subtitle">Protecting Your Family's Trust, Naturally</div>
+    </section>
+
+    <div class="privacy-content">
+        <div class="last-updated">
+            <strong>Last Updated:</strong> June 1, 2025
+        </div>
+
+        <div class="privacy-section">
+            <h2>Our Commitment to Your Privacy</h2>
+            <p>At Train Your Rotty, we understand that trust is the foundation of every meaningful relationship - whether between human and dog, or between our training family and yours. Just as we honor the natural bond between you and your Rottweiler, we honor your right to privacy and protect your personal information with the same care we bring to training your beloved companion.</p>
+            
+            <div class="highlight-box">
+                <p><strong>Our Promise:</strong> We collect only what we need to serve you and your Rottweiler better, we never sell your information, and we protect your data as carefully as we protect our own family.</p>
+            </div>
+        </div>
+
+        <div class="privacy-section">
+            <h2>Information We Collect</h2>
+            
+            <h3>Training & Contact Information</h3>
+            <p>To provide personalized training services for you and your Rottweiler, we collect:</p>
+            <ul>
+                <li><strong>Contact Details:</strong> Name, email address, phone number, and home address</li>
+                <li><strong>Dog Information:</strong> Your Rottweiler's name, age, health status, behavioral history, and training goals</li>
+                <li><strong>Training Records:</strong> Progress notes, session summaries, and behavioral observations</li>
+                <li><strong>Emergency Contacts:</strong> Veterinarian information and emergency contact details</li>
+                <li><strong>Payment Information:</strong> Billing address and payment method details (processed securely through our payment partners)</li>
+            </ul>
+
+            <h3>Website & Communication Data</h3>
+            <p>When you visit our website or communicate with us, we may collect:</p>
+            <ul>
+                <li><strong>Website Usage:</strong> Pages visited, time spent, and general location (city/state level only)</li>
+                <li><strong>Communication Records:</strong> Emails, messages, and phone call notes</li>
+                <li><strong>Photos & Videos:</strong> Training progress documentation (only with your explicit consent)</li>
+            </ul>
+        </div>
+
+        <div class="privacy-section">
+            <h2>How We Use Your Information</h2>
+            
+            <h3>Training Services</h3>
+            <ul>
+                <li>Designing personalized training programs for your Rottweiler</li>
+                <li>Tracking progress and adjusting methods as needed</li>
+                <li>Communicating about sessions, schedules, and your dog's development</li>
+                <li>Providing ongoing support and guidance</li>
+                <li>Emergency situations involving your dog's safety</li>
+            </ul>
+
+            <h3>Service Improvement</h3>
+            <ul>
+                <li>Understanding what training methods work best</li>
+                <li>Developing new programs based on breed-specific needs</li>
+                <li>Improving our website and booking system</li>
+                <li>Creating educational content (always anonymized)</li>
+            </ul>
+
+            <h3>Communication</h3>
+            <ul>
+                <li>Sending appointment reminders and training tips</li>
+                <li>Sharing seasonal training advice and activities</li>
+                <li>Notifying you of new services or important updates</li>
+                <li>Responding to your questions and concerns</li>
+            </ul>
+        </div>
+
+        <div class="privacy-section">
+            <h2>Information Sharing & Protection</h2>
+            
+            <div class="highlight-box">
+                <p><strong>We Never Sell Your Information.</strong> Your data is not a commodity to us - it's a trust you've placed in our care.</p>
+            </div>
+
+            <h3>Limited Sharing Circumstances</h3>
+            <p>We may share your information only in these specific situations:</p>
+            <ul>
+                <li><strong>Veterinary Emergencies:</strong> With your veterinarian if your dog requires immediate medical attention during training</li>
+                <li><strong>Service Providers:</strong> With trusted partners who help us operate (payment processors, scheduling systems) - all bound by strict confidentiality agreements</li>
+                <li><strong>Legal Requirements:</strong> If required by law or to protect safety (we will notify you when legally permitted)</li>
+                <li><strong>Business Transfer:</strong> If our business is sold, your information would transfer with appropriate protections</li>
+            </ul>
+
+            <h3>Data Security Measures</h3>
+            <ul>
+                <li>Encrypted data storage and transmission</li>
+                <li>Regular security audits and updates</li>
+                <li>Limited access - only authorized team members</li>
+                <li>Secure payment processing through certified partners</li>
+                <li>Regular backup and recovery procedures</li>
+            </ul>
+        </div>
+
+        <div class="privacy-section">
+            <h2>Your Privacy Rights</h2>
+            
+            <h3>Access & Control</h3>
+            <p>You have complete control over your information:</p>
+            <ul>
+                <li><strong>View:</strong> Request a copy of all information we have about you and your dog</li>
+                <li><strong>Update:</strong> Correct or update any information at any time</li>
+                <li><strong>Delete:</strong> Request deletion of your information (some training records may be retained for safety purposes)</li>
+                <li><strong>Restrict:</strong> Limit how we use your information</li>
+                <li><strong>Transfer:</strong> Receive your data in a portable format</li>
+            </ul>
+
+            <h3>Communication Preferences</h3>
+            <p>You can control all communications from us:</p>
+            <ul>
+                <li>Opt out of marketing emails while keeping essential training communications</li>
+                <li>Choose frequency of training tips and seasonal advice</li>
+                <li>Update your preferred communication methods</li>
+                <li>Unsubscribe from all non-essential communications</li>
+            </ul>
+        </div>
+
+        <div class="privacy-section">
+            <h2>Cookies & Website Data</h2>
+            <p>Our website uses minimal, essential cookies to:</p>
+            <ul>
+                <li>Remember your preferences and login status</li>
+                <li>Improve website functionality and user experience</li>
+                <li>Understand which content is most helpful to dog owners</li>
+                <li>Ensure security and prevent fraud</li>
+            </ul>
+            <p>You can control cookies through your browser settings. Disabling cookies may affect some website functionality but won't impact our training services.</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>Children's Privacy</h2>
+            <p>Our services often involve families with children, and we take special care to protect young family members' privacy. We do not knowingly collect personal information from children under 13 without parental consent. If you're a parent concerned about your child's information, please contact us immediately.</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>Data Retention</h2>
+            <p>We keep your information only as long as necessary:</p>
+            <ul>
+                <li><strong>Active Training:</strong> Throughout our training relationship and for ongoing support</li>
+                <li><strong>Training Records:</strong> Up to 7 years for safety and reference purposes</li>
+                <li><strong>Contact Information:</strong> Until you request deletion or unsubscribe</li>
+                <li><strong>Website Data:</strong> 2 years for analytics and improvement purposes</li>
+                <li><strong>Payment Records:</strong> As required by law and financial regulations</li>
+            </ul>
+        </div>
+
+        <div class="privacy-section">
+            <h2>Updates to This Policy</h2>
+            <p>Like a well-trained Rottweiler, this policy evolves with care and purpose. We may update this privacy policy to reflect changes in our practices, technology, or legal requirements. When we do:</p>
+            <ul>
+                <li>We'll notify you by email if changes significantly affect your rights</li>
+                <li>We'll post the updated policy on our website with a new "Last Updated" date</li>
+                <li>We'll continue honoring your preferences under the previous policy until you have a chance to review changes</li>
+            </ul>
+        </div>
+
+        <div class="contact-info">
+            <h3>Questions About Your Privacy?</h3>
+            <p>Just as we're always here to help with your Rottweiler's training journey, we're here to address any privacy concerns.</p>
+            <p><strong>Email:</strong> <a href="mailto:privacy@trainyourrotty.com">privacy@trainyourrotty.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+1-555-768-8943">+1-555-768-8943</a></p>
+            <p><strong>Mail:</strong> Train Your Rotty Privacy Team<br>196 Hwy 84, Flemington, Georgia 31313</p>
+            <p><em>We typically respond within 24 hours, just like we do for training questions.</em></p>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="index.html" class="back-link">← Return to Home</a>
+        </div>
+    </div>
+</body>
+</html>

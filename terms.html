@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Train Your Rotty</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.7;
+            color: #2c3e2d;
+            overflow-x: hidden;
+            background: #fafafa;
+        }
+
+        /* Fixed Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(45, 80, 22, 0.95);
+            backdrop-filter: blur(15px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(212, 212, 170, 0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: #f4f3e8;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+        }
+
+        nav a:hover {
+            color: #cd853f;
+            background: rgba(244, 243, 232, 0.1);
+        }
+
+        /* Header Section */
+        .terms-header {
+            background: linear-gradient(135deg, #2d5016 0%, #4a7c59 50%, #52734d 100%);
+            padding: 150px 20px 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .terms-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="paw-pattern" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="15" cy="8" r="2" fill="rgba(255,255,255,0.06)"/><circle cx="10" cy="12" r="1.5" fill="rgba(255,255,255,0.06)"/><circle cx="20" cy="12" r="1.5" fill="rgba(255,255,255,0.06)"/><circle cx="12" cy="16" r="1" fill="rgba(255,255,255,0.06)"/><circle cx="18" cy="16" r="1" fill="rgba(255,255,255,0.06)"/><ellipse cx="15" cy="20" rx="3" ry="2" fill="rgba(255,255,255,0.06)"/></pattern></defs><rect width="100" height="100" fill="url(%23paw-pattern)"/></svg>');
+            animation: drift 30s ease-in-out infinite;
+        }
+
+        @keyframes drift {
+            0%, 100% { transform: translateX(0px) translateY(0px); }
+            25% { transform: translateX(-15px) translateY(-8px); }
+            50% { transform: translateX(0px) translateY(-15px); }
+            75% { transform: translateX(15px) translateY(-8px); }
+        }
+
+        .terms-header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #f4f3e8;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+            position: relative;
+            z-index: 2;
+        }
+
+        .terms-header .subtitle {
+            font-size: 1.3rem;
+            color: #d4d4aa;
+            font-style: italic;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Main Content */
+        .terms-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(45, 80, 22, 0.1);
+            margin-top: -40px;
+            position: relative;
+            z-index: 3;
+        }
+
+        .last-updated {
+            background: linear-gradient(135deg, #f0f8e8 0%, #e8f5e8 100%);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-left: 5px solid #8b4513;
+            margin-bottom: 3rem;
+            font-weight: 600;
+            color: #2d5016;
+        }
+
+        .terms-section {
+            margin-bottom: 3rem;
+        }
+
+        .terms-section h2 {
+            font-size: 2rem;
+            color: #2d5016;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #8b4513;
+            font-family: 'Georgia', serif;
+        }
+
+        .terms-section h3 {
+            font-size: 1.4rem;
+            color: #4a7c59;
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+        }
+
+        .terms-section p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .terms-section ul, .terms-section ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .terms-section li {
+            margin-bottom: 0.8rem;
+            line-height: 1.7;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #f4f3e8 0%, #faf8f1 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px solid #d4d4aa;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .highlight-box::before {
+            content: '📋';
+            font-size: 1.5rem;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: white;
+            padding: 0 10px;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px solid #ffd93d;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .warning-box::before {
+            content: '⚠️';
+            font-size: 1.5rem;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: white;
+            padding: 0 10px;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #2d5016 0%, #4a7c59 100%);
+            color: #f4f3e8;
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .contact-info h3 {
+            color: #cd853f;
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+        }
+
+        .contact-info a {
+            color: #d4d4aa;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-info a:hover {
+            color: #cd853f;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 12px 30px;
+            background: linear-gradient(45deg, #8b4513, #a0522d);
+            color: #f4f3e8;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .back-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(139, 69, 19, 0.3);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .terms-header {
+                padding: 120px 20px 80px;
+            }
+
+            .terms-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .terms-content {
+                margin-top: -20px;
+                padding: 60px 20px;
+            }
+
+            .terms-section h2 {
+                font-size: 1.6rem;
+            }
+
+            nav ul {
+                gap: 1.5rem;
+            }
+
+            nav a {
+                font-size: 0.8rem;
+                padding: 0.3rem 0.8rem;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#philosophy">Philosophy</a></li>
+            <li><a href="index.html#training">Training</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="terms-header">
+        <h1>Terms of Service</h1>
+        <div class="subtitle">Building Trust Through Clear Understanding</div>
+    </section>
+
+    <div class="terms-content">
+        <div class="last-updated">
+            <strong>Last Updated:</strong> June 1, 2025
+        </div>
+
+        <div class="terms-section">
+            <h2>Welcome to Our Training Family</h2>
+            <p>Just as every great relationship between human and Rottweiler is built on mutual understanding and respect, our professional relationship with you begins with clear expectations and shared commitments. These Terms of Service outline the foundation of our partnership in nurturing your Rottweiler's potential while ensuring the safety and success of everyone involved.</p>
+            
+            <div class="highlight-box">
+                <p><strong>Our Partnership Promise:</strong> We're committed to providing exceptional training services that honor your Rottweiler's nature while building the harmonious relationship you desire. In return, we ask for your commitment to following our guidance and maintaining the safety standards essential for effective training.</p>
+            </div>
+        </div>
+
+        <div class="terms-section">
+            <h2>Training Services Agreement</h2>
+            
+            <h3>What We Provide</h3>
+            <p>Train Your Rotty offers comprehensive, breed-specific training services including:</p>
+            <ul>
+                <li><strong>Individual Training Sessions:</strong> One-on-one training tailored to your Rottweiler's specific needs and temperament</li>
+                <li><strong>Behavioral Assessment:</strong> Professional evaluation of your dog's current behavior and training requirements</li>
+                <li><strong>Customized Training Plans:</strong> Detailed programs designed for your specific goals and timeline</li>
+                <li><strong>Ongoing Support:</strong> Guidance, advice, and follow-up support throughout your training journey</li>
+                <li><strong>Educational Resources:</strong> Training materials, tips, and resources for continued success</li>
+                <li><strong>Emergency Consultation:</strong> Priority support for urgent behavioral concerns</li>
+            </ul>
+
+            <h3>What We Expect From You</h3>
+            <p>Successful training requires your active participation and commitment to:</p>
+            <ul>
+                <li><strong>Honest Communication:</strong> Provide complete and accurate information about your dog's history, behavior, and health</li>
+                <li><strong>Consistency:</strong> Follow training protocols between sessions and maintain established routines</li>
+                <li><strong>Safety First:</strong> Ensure your dog's current vaccinations and health clearance from your veterinarian</li>
+                <li><strong>Preparation:</strong> Have your dog properly exercised and ready for each training session</li>
+                <li><strong>Respect:</strong> Treat our trainers, other clients, and all animals with courtesy and respect</li>
+            </ul>
+        </div>
+
+        <div class="terms-section">
+            <h2>Health & Safety Requirements</h2>
+            
+            <div class="warning-box">
+                <p><strong>Critical Safety Notice:</strong> Training powerful breeds like Rottweilers requires strict adherence to safety protocols. Your dog's and everyone's safety depends on following these requirements without exception.</p>
+            </div>
+
+            <h3>Pre-Training Requirements</h3>
+            <ul>
+                <li><strong>Veterinary Clearance:</strong> Current health certificate and vaccination records required before first session</li>
+                <li><strong>Behavioral Disclosure:</strong> Full disclosure of any aggressive incidents, bite history, or concerning behaviors</li>
+                <li><strong>Insurance Verification:</strong> Proof of homeowner's or renter's insurance covering pet liability</li>
+                <li><strong>Emergency Contacts:</strong> Veterinarian information and emergency contact details on file</li>
+            </ul>
+
+            <h3>During Training Sessions</h3>
+            <ul>
+                <li><strong>Supervision:</strong> Owner or designated adult must be present during all training sessions</li>
+                <li><strong>Equipment:</strong> Only approved training equipment will be used; we reserve the right to refuse unsafe gear</li>
+                <li><strong>Environment:</strong> Training areas must be secure and free from distractions that could compromise safety</li>
+                <li><strong>Immediate Disclosure:</strong> Any incidents, injuries, or behavioral changes must be reported immediately</li>
+            </ul>
+
+            <h3>Health Monitoring</h3>
+            <p>We monitor all dogs for signs of stress, injury, or illness during training. If we observe concerning symptoms, we may:</p>
+            <ul>
+                <li>Pause or end the training session immediately</li>
+                <li>Require veterinary evaluation before continuing training</li>
+                <li>Adjust training methods to accommodate health needs</li>
+                <li>Recommend specialist consultation if needed</li>
+            </ul>
+        </div>
+
+        <div class="terms-section">
+            <h2>Scheduling & Cancellation Policy</h2>
+            
+            <h3>Booking & Confirmation</h3>
+            <ul>
+                <li><strong>Advance Booking:</strong> Sessions should be scheduled at least 48 hours in advance</li>
+                <li><strong>Confirmation:</strong> All appointments are confirmed 24 hours prior to the session</li>
+                <li><strong>Availability:</strong> Schedule availability varies by season and trainer capacity</li>
+                <li><strong>Package Sessions:</strong> Training packages must be used within 6 months of purchase</li>
+            </ul>
+
+            <h3>Cancellation & Rescheduling</h3>
+            <ul>
+                <li><strong>24-Hour Notice:</strong> Cancellations require at least 24 hours advance notice for full credit</li>
+                <li><strong>Same-Day Cancellation:</strong> Sessions cancelled with less than 24 hours notice are charged at 50% of session rate</li>
+                <li><strong>No-Show Policy:</strong> Failure to attend a scheduled session without notice results in full session charge</li>
+                <li><strong>Weather Exceptions:</strong> Severe weather cancellations by either party do not incur charges</li>
+                <li><strong>Emergency Exceptions:</strong> Medical emergencies (human or canine) are exempt from cancellation fees</li>
+            </ul>
+
+            <h3>Trainer-Initiated Changes</h3>
+            <p>If we need to cancel or reschedule due to trainer illness, emergency, or other circumstances beyond our control, we will:</p>
+            <ul>
+                <li>Provide as much advance notice as possible</li>
+                <li>Offer alternative times or backup trainer options</li>
+                <li>Provide full credit for any affected sessions</li>
+                <li>Extend package expiration dates as needed</li>
+            </ul>
+        </div>
+
+        <div class="terms-section">
+            <h2>Payment Terms & Policies</h2>
+            
+            <h3>Pricing & Payment</h3>
+            <ul>
+                <li><strong>Session Rates:</strong> Current pricing is available on our website and confirmed at booking</li>
+                <li><strong>Package Discounts:</strong> Multi-session packages offer reduced per-session rates</li>
+                <li><strong>Payment Methods:</strong> We accept cash, check, and major credit cards</li>
+                <li><strong>Payment Timing:</strong> Individual sessions are paid at time of service; packages are paid in advance</li>
+            </ul>
+
+            <h3>Refund Policy</h3>
+            <ul>
+                <li><strong>Unused Package Sessions:</strong> Refunds for unused sessions are available within 30 days of purchase, minus 20% administrative fee</li>
+                <li><strong>Partial Packages:</strong> Partially used packages may be refunded for unused sessions at current individual session rates</li>
+                <li><strong>Service Issues:</strong> If you're unsatisfied with service quality, we'll work to resolve concerns or provide appropriate credits</li>
+                <li><strong>Health-Related Cancellations:</strong> Full refunds available for packages when training cannot continue due to dog's health issues</li>
+            </ul>
+
+            <h3>Price Changes</h3>
+            <p>Training rates may change periodically. Current clients will receive:</p>
+            <ul>
+                <li>30-day advance notice of any price increases</li>
+                <li>Opportunity to purchase additional sessions at current rates</li>
+                <li>Existing package sessions honored at original purchase price</li>
+            </ul>
+        </div>
+
+        <div class="terms-section">
+            <h2>Liability & Risk Acknowledgment</h2>
+            
+            <div class="warning-box">
+                <p><strong>Important Legal Notice:</strong> Dog training, especially with powerful breeds like Rottweilers, involves inherent risks. By engaging our services, you acknowledge these risks and agree to the following liability terms.</p>
+            </div>
+
+            <h3>Risk Acknowledgment</h3>
+            <p>You understand and acknowledge that:</p>
+            <ul>
+                <li><strong>Animal Behavior:</strong> Dogs are animals with natural instincts that can be unpredictable</li>
+                <li><strong>Training Process:</strong> Behavior modification takes time and may involve temporary increases in certain behaviors</li>
+                <li><strong>No Guarantees:</strong> While we use proven methods, we cannot guarantee specific results or timelines</li>
+                <li><strong>Owner Responsibility:</strong> Ultimate responsibility for your dog's actions remains with you</li>
+                <li><strong>Physical Activity:</strong> Training involves physical activity that carries inherent injury risks</li>
+            </ul>
+
+            <h3>Liability Limitations</h3>
+            <ul>
+                <li><strong>Professional Standards:</strong> We maintain professional liability insurance and follow industry best practices</li>
+                <li><strong>Damage Limitation:</strong> Our liability is limited to the cost of training services provided</li>
+                <li><strong>Third-Party Claims:</strong> You agree to hold us harmless from claims arising from your dog's actions</li>
+                <li><strong>Property Damage:</strong> We are not responsible for damage caused by your dog during training</li>
+                <li><strong>Medical Expenses:</strong> We recommend maintaining adequate insurance coverage for potential veterinary costs</li>
+            </ul>
+
+            <h3>Indemnification</h3>
+            <p>You agree to indemnify and hold Train Your Rotty harmless from any claims, damages, or expenses arising from:</p>
+            <ul>
+                <li>Your dog's actions or behavior</li>
+                <li>Failure to follow safety instructions or training protocols</li>
+                <li>Providing false or incomplete information about your dog</li>
+                <li>Violations of these terms of service</li>
+            </ul>
+        </div>
+
+        <div class="terms-section">
+            <h2>Training Results & Expectations</h2>
+            
+            <h3>Realistic Expectations</h3>
+            <p>Effective dog training is a process that requires time, consistency, and patience. We help set realistic expectations by:</p>
+            <ul>
+                <li><strong>Individual Assessment:</strong> Every dog is unique, and training timelines vary based on age, temperament, and history</li>
+                <li><strong>Goal Setting:</strong> We work with you to establish achievable, measurable goals</li>
+                <li><strong>Progress Tracking:</strong> Regular assessment and adjustment of training methods based on results</li>
+                <li><strong>Honest Communication:</strong> Clear feedback about progress, challenges, and realistic timelines</li>
+            </ul>
+
+            <h3>Success Factors</h3>
+            <p>Training success depends on several factors:</p>
+            <ul>
+                <li><strong>Consistency:</strong> Following training protocols between sessions</li>
+                <li><strong>Practice:</strong> Regular reinforcement of learned behaviors</li>
+                <li><strong>Environment:</strong> Maintaining consistent rules and expectations at home</li>
+                <li><strong>Health:</strong> Addressing any underlying health issues that may affect behavior</li>
+                <li><strong>Family Participation:</strong> All family members must consistently apply training principles</li>
+            </ul>
+
+            <h3>Challenging Cases</h3>
+            <p>Some behavioral issues may require:</p>
+            <ul>
+                <li>Extended training timelines</li>
+                <li>Veterinary behavioral consultation</li>
+                <li>Medication management in conjunction with training</li>
+                <li>Environmental management strategies</li>
+                <li>Referral to specialized professionals</li>
+            </ul>
+        </div>
+
+        <div class="terms-section">
+            <h2>Termination of Services</h2>
+            
+            <h3>Client-Initiated Termination</h3>
+            <p>You may terminate training services at any time by providing written notice. Upon termination:</p>
+            <ul>
+                <li>Unused package sessions will be refunded according to our refund policy</li>
+                <li>All outstanding payments must be settled</li>
+                <li>Training materials and records will be provided</li>
+                <li>Final consultation available to discuss progress and recommendations</li>
+            </ul>
+
+            <h3>Trainer-Initiated Termination</h3>
+            <p>We reserve the right to terminate services in cases of:</p>
+            <ul>
+                <li><strong>Safety Concerns:</strong> When we determine that continued training poses safety risks</li>
+                <li><strong>Non-Compliance:</strong> Failure to follow safety protocols or training instructions</li>
+                <li><strong>Aggressive Behavior:</strong> Toward trainers, other clients, or dogs that cannot be safely managed</li>
+                <li><strong>Payment Issues:</strong> Non-payment or repeated late payments</li>
+                <li><strong>Misrepresentation:</strong> Providing false information about your dog's history or behavior</li>
+            </ul>
+
+            <h3>Termination Process</h3>
+            <p>When termination is necessary:</p>
+            <ul>
+                <li>Written notice will be provided explaining the reasons</li>
+                <li>Referrals to appropriate specialists or resources will be offered</li>
+                <li>Unused package sessions will be refunded proportionally</li>
+                <li>All training records will be provided for continuity of care</li>
+            </ul>
+        </div>
+
+        <div class="terms-section">
+            <h2>Privacy & Confidentiality</h2>
+            
+            <p>Your privacy is important to us. Our full Privacy Policy details how we collect, use, and protect your information. Key points include:</p>
+            <ul>
+                <li><strong>Training Records:</strong> We maintain confidential records of your dog's training progress</li>
+                <li><strong>Information Sharing:</strong> We do not share client information without consent, except in emergencies</li>
+                <li><strong>Photography:</strong> Photos or videos for training documentation require explicit consent</li>
+                <li><strong>Testimonials:</strong> Use of your testimonials or success stories requires written permission</li>
+            </ul>
+            
+            <p>For complete privacy information, please review our <a href="privacy-policy.html" style="color: #4a7c59; text-decoration: underline;">Privacy Policy</a>.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>Dispute Resolution</h2>
+            
+            <h3>Our Commitment to Resolution</h3>
+            <p>Just as we help resolve conflicts between dogs and their families, we're committed to resolving any concerns you may have about our services:</p>
+            
+            <ol>
+                <li><strong>Direct Communication:</strong> Most issues can be resolved through open, honest conversation</li>
+                <li><strong>Formal Complaint Process:</strong> Written complaints will be acknowledged within 48 hours and addressed within one week</li>
+                <li><strong>Mediation:</strong> For significant disputes, we're open to professional mediation</li>
+                <li><strong>Legal Resolution:</strong> Any legal disputes will be resolved in the courts of [Your State/County]</li>
+            </ol>
+
+            <h3>Governing Law</h3>
+            <p>These terms are governed by the laws of [Your State], and any disputes will be resolved in the appropriate courts of [Your County, State].</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>Updates to Terms of Service</h2>
+            
+            <p>Like our training methods, these terms may evolve to better serve our clients and ensure safety. When updates occur:</p>
+            <ul>
+                <li><strong>Advance Notice:</strong> Significant changes will be communicated 30 days in advance</li>
+                <li><strong>Continued Service:</strong> Using our services after changes take effect constitutes acceptance</li>
+                <li><strong>Version Control:</strong> Updated terms will be posted with revision dates</li>
+                <li><strong>Questions Welcome:</strong> We're always available to explain any changes or address concerns</li>
+            </ul>
+        </div>
+
+        <div class="terms-section">
+            <h2>Contact & Communication</h2>
+            
+            <h3>Preferred Communication Methods</h3>
+            <ul>
+                <li><strong>Scheduling:</strong> Online booking system or phone calls</li>
+                <li><strong>Training Questions:</strong> Email for non-urgent questions, phone for immediate concerns</li>
+                <li><strong>Emergencies:</strong> Phone calls for urgent behavioral or safety issues</li>
+                <li><strong>Administrative:</strong> Email for billing, scheduling, or policy questions</li>
+            </ul>
+
+            <h3>Response Times</h3>
+            <ul>
+                <li><strong>Emergency Calls:</strong> Within 2 hours during business hours</li>
+                <li><strong>Regular Inquiries:</strong> Within 24 hours</li>
+                <li><strong>Administrative Requests:</strong> Within 48 hours</li>
+                <li><strong>After-Hours:</strong> Emergency line available for urgent safety concerns</li>
+            </ul>
+        </div>
+
+        <div class="contact-info">
+            <h3>Questions About These Terms?</h3>
+            <p>We believe in clear communication and are always happy to explain any aspect of our terms of service.</p>
+            <p><strong>Email:</strong> <a href="mailto:terms@trainyourrotty.com">terms@trainyourrotty.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+1-555-768-8943">+1-555-768-8943</a></p>
+            <p><strong>Mail:</strong> Train Your Rotty Legal Department<br>196 Hwy 84
+Flemington, Georgia 31313
+
+By appointment only</p>
+            <p><em>We're here to build understanding, not confusion. Never hesitate to ask questions.</em></p>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="index.html" class="back-link">← Return to Home</a>
+        </div>
+    </div>
+</body>
+</html>
